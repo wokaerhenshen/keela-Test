@@ -1,0 +1,4 @@
+1.Meteor will auto load all the files(js/css) except files in the import folder
+2.If you put a file in the public folder, you can access to this file by the rootUrl/fileName
+3.command for delete dependency in meteor: meteor remove theName
+  command for delete a node_modules package : npm uninstall packageName

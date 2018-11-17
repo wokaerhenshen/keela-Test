@@ -1,7 +1,9 @@
-/* @import "assets/css/bootstrap.css";
-@import "assets/css/oneui.css";*/
-@import "fonts/glyphicons-halflings-regular.svg";
-@import "fonts/glyphicons-halflings-regular.eot"; 
-@import "fonts/glyphicons-halflings-regular.ttf"; 
-@import "fonts/glyphicons-halflings-regular.woff"; 
-@import "fonts/glyphicons-halflings-regular.woff2"; 
+@font-face {
+    font-family: 'Glyphicons Halflings'; 
+    src:
+    url("/font/fontawesome-webfont.woff"),
+    url("/font/glyphicons-halflings-regular.svg") format('svg'),
+    url("/fonts/glyphicons-halflings-regular.woff"),
+    url("/fonts/glyphicons-halflings-regular.woff2"),
+    url("/fonts/glyphicons-halflings-regular.ttf");
+}
