@@ -2,7 +2,8 @@ import { Meteor } from 'meteor/meteor';
 
 Meteor.startup(() => {
   // code to run on server at startup
-  //"start": "MONGO_URL=mongodb://username:password@host_url:portnumber/dbname meteor run"
+  console.log(process.env);
+  process.env.MONGO_URL='mongodb://xuwenjie410:Aa19940422~@ds211724.mlab.com:11724/keelademo';
 });
 
 Accounts.onCreateUser(function(options, user) {
