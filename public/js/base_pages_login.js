@@ -42,6 +42,28 @@ var BasePagesLogin = function() {
                 }
             }
         });
+
+        jQuery('.form-material.floating > .form-control').each(function(){
+            var $input  = jQuery(this);
+            var $parent = $input.parent('.form-material');
+
+            if ($input.val()) {
+                $parent.addClass('open');
+            }
+
+            $input.on('change', function(){
+                if ($input.val()) {
+                    $parent.addClass('open');
+                } else {
+                    $parent.removeClass('open');
+                }
+            });
+        });
+
+
+
+
+
     };
 
     return {

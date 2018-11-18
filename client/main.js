@@ -1,12 +1,16 @@
 import { Template } from 'meteor/templating';
 import { Meteor} from 'meteor/meteor';
+
+// import css files
 import "../imports/css/bootstrap.min.css";
 import "../imports/css/oneui.css";
 
+//import js files
 import "../imports/js/jquery.min.js";
 import "../imports/js/bootstrap.min.js";
 import "../imports/js/jquery.validate.min.js";
 
+//import template files
 import "../imports/ui/home.html";
 import "../imports/ui/login.html";
 import "../imports/ui/register.html";
