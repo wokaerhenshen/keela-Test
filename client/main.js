@@ -33,6 +33,7 @@ Router.route('/home',{
   if(currentUser){
     //logged-in
     if(Meteor.user()){
+      console.log(Meteor.user());
       var email = Meteor.user().emails[0].address;
       this.render('home',{data:{name:email}});
     }else {
