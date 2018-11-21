@@ -23,23 +23,28 @@ Template.login.events({
       var email = $('#login-username').val();
       var password = $('#login-password').val();
       var rememberMe = $('#login-remember-me')[0].checked;
-      if(rememberMe){
-        localStorage.setItem('remember', 'checked');
-        localStorage.setItem('email', email);
-        localStorage.setItem('password', password);
+
+      //ensure the values are not null
+      if(email && password){
+        if(rememberMe){
+            localStorage.setItem('remember', 'checked');
+            localStorage.setItem('email', email);
+            localStorage.setItem('password', password);
+          }else {
+            localStorage.clear();
+          }
+          Meteor.loginWithPassword(email,password,function(error){
+            //console.log("try to login...");
+            if(error){
+              alert(error.reason);
+            }else {
+              Router.go('home');
+            }
+    
+          });
       }else {
-        localStorage.clear();
+          alert("invalid email or password!");
       }
-      Meteor.loginWithPassword(email,password,function(error){
-        //console.log("try to login...");
-        if(error){
-          alert(error.reason);
-        }else {
-          Router.go('home');
-        }
-
-      });
-
     }
 });
 

@@ -2,3 +2,5 @@
 2.If you put a file in the public folder, you can access to this file by the rootUrl/fileName
 3.command for delete dependency in meteor: meteor remove theName
   command for delete a node_modules package : npm uninstall packageName
+
+4.When the user log in and then navigvate to other pages and go back to /home, meteor will grab the UI first, and then comparing the UI with data in the database, if the record didn't match, meteor will refresh the page and show the correct record otherwise meteor will remain this correct page.

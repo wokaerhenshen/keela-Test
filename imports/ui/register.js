@@ -4,25 +4,31 @@ import "./register.html";
 //router for the register page
 Router.route('/register');
 
-//handler for the register submit
+//handler for the register submit and agree button
 Template.register.events({
     'submit .js-validation-register':function(event){
       event.preventDefault();
       var userName = $('#register-username').val();
       var email = $('#register-email').val();
       var password = $('#register-password').val();
-      Accounts.createUser({
-        email:email,
-        password:password,
-        userName:userName
-      },function(error){
-        if(error){
-          alert(error.reason);
-        }else{
-          Router.go('home');
-        }
-      });
-      
+      if(email && password){
+        Accounts.createUser({
+            email:email,
+            password:password,
+            userName:userName
+          },function(error){
+            if(error){
+              alert(error.reason);
+            }else{
+              Router.go('home');
+            }
+          });
+      }else {
+        alert("invalid email or password!");
+      }      
+    },
+    'click #agreeButton':function(){
+        $("#register-terms").prop('checked', true);;
     }  
 });
 
