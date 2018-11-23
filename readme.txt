@@ -4,5 +4,5 @@ Issues and improvements:
 
 2. For this application I just put all the code I want to include in the imports folder and import these files in my main.js file. I think there might be a better way to organize the files. I choose this way because it seperate my code and default files well.
 
-3.In this project I didn't use meteor or npm packages and I just include jquery and bootstrap by the files oneUI provided me because they work fine for me. I may use the packages when I build large projects. 
+3.In this project I didn't use meteor or npm packages and I just include jquery and bootstrap by the files oneUI provided me because they work fine for me. I may use the packages when I build other projects. 
 
